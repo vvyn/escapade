@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "bucketlist-app",
+    "slug": "bucketlist-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "bucketlist-app"
+}
