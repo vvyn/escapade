@@ -22,7 +22,7 @@ const MainTabScreen = () => (
       initialRouteName="Home"
       labeled={false}
       activeColor="#F9E5E9"
-      inactiveColor='#F6D3D9'
+      inactiveColor='#5BB097'
       barStyle={{backgroundColor: '#FFFFFF'}}>
       <Tab.Screen
         name="Leaderboard"
