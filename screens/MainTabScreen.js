@@ -30,7 +30,7 @@ const MainTabScreen = () => (
         options={{
           tabBarLabel: 'Leader Board',
           tabBarIcon: ({color}) => (
-            <Image source={leaderboardPic} style={{width: 20, height: 20}} />
+            <Image source={leaderboardPic} style={{width: 25, height: 25}} />
           ),
         }}
       />
@@ -40,7 +40,7 @@ const MainTabScreen = () => (
         options={{
           tabBarLabel: 'Friends',
           tabBarIcon: ({color}) => (
-            <Image source={friendsPic} style={{width: 45, height: 20}} />
+            <Image source={friendsPic} style={{width: 30, height: 23}} />
           ),
         }}
       />
@@ -50,7 +50,7 @@ const MainTabScreen = () => (
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => (
-            <Image source={homePic} style={{width: 45, height: 20}} />
+            <Image source={homePic} style={{width: 25, height: 25}} />
           ),
         }}
       />
@@ -60,7 +60,7 @@ const MainTabScreen = () => (
         options={{
           tabBarLabel: 'Feed',
           tabBarIcon: ({color}) => (
-            <Image source={feedPic} style={{width: 45, height: 20}} />
+            <Image source={feedPic} style={{width: 25, height: 25}} />
           ),
         }}
       />
@@ -70,7 +70,7 @@ const MainTabScreen = () => (
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({color}) => (
-            <Image source={searchPic} style={{width: 30, height: 15}} />
+            <Image source={searchPic} style={{width: 25, height: 25}} />
           ),
         }}
       />
