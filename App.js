@@ -3,6 +3,8 @@ import React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MainTabScreen from './screens/MainTabScreen';
 
 function HomeScreen() {
   return (
@@ -44,24 +46,19 @@ function FriendsScreen() {
   );
 }
 
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-function MyTabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Leaderboard" component={LeaderboardScreen} />
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Friends" component={FriendsScreen} />
-      <Tab.Screen name="Feed" component={FeedScreen} />
-     <Tab.Screen name="Search" component={SearchScreen} />
-    </Tab.Navigator>
-  );
+const App = () => {
+return (
+  <NavigationContainer>
+    <Stack.Navigator screenOptions={{
+      headerShown: false,
+  }}>
+      <Stack.Screen name="PawMatch" component={MainTabScreen} />
+    </Stack.Navigator>
+  </NavigationContainer>
+
+);
 }
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-  );
-}
+export default App;
