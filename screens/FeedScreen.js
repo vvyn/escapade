@@ -5,13 +5,14 @@ import { StyleSheet, ScrollView, Text, View, Image, Pressable, TouchableOpacity 
 
 const FeedScreen = () => {
   const[count, setCount] = useState(0);
+  const[count2, setCount2] = useState(0)
 
   return (
     <View style={styles.container}>
       <ScrollView>
       <Image source={require("../assets/feed_bg.png")}
              style={styles.headerContainer}></Image>
-        <Text style={styles.headerTitle}>User's Feed</Text>
+        <Text style={styles.headerTitle}>Mark's Feed</Text>
 
       
         <Text style={styles.textContainer}>
@@ -55,6 +56,17 @@ const FeedScreen = () => {
                style={styles.postPic}>
                </Image>
 
+        <TouchableOpacity 
+          style={styles.buttonFacebookStyle}
+          activeOpacity={0.5}
+          onPress={() => {setCount2(count2 + 1)}}>
+          <Image
+            source={require("../assets/heart.png")}
+            style={styles.likeImage}
+          />
+          <Text style={styles.numImg}>{count2}</Text>
+        </TouchableOpacity>
+
 
 
         <Text style={styles.textContainer}>
@@ -73,6 +85,17 @@ const FeedScreen = () => {
         <Image source={require("../assets/scuba.png")}
                style={styles.postPic}>
                </Image>
+        
+               <TouchableOpacity 
+          style={styles.buttonFacebookStyle}
+          activeOpacity={0.5}
+          onPress={() => {setCount(count + 1)}}>
+          <Image
+            source={require("../assets/heart.png")}
+            style={styles.likeImage}
+          />
+          <Text style={styles.numImg}>{count}</Text>
+        </TouchableOpacity>
 
         <Text style={styles.textContainer}>
           <Image source={require("../assets/friends_profile3.png")}
@@ -87,18 +110,41 @@ const FeedScreen = () => {
 
         <Text style={{fontSize:20, marginHorizontal: 30, marginVertical: 30}}>Went to Indonesia last week :)</Text>
 
+        <TouchableOpacity 
+          style={styles.buttonFacebookStyle}
+          activeOpacity={0.5}
+          onPress={() => {setCount2(count2 + 1)}}>
+          <Image
+            source={require("../assets/heart.png")}
+            style={styles.likeButton}
+            
+          />
+          <Text style={styles.numLikes}>{count2}</Text>
+        </TouchableOpacity>
+
         <Text style={styles.textContainer}>
           <Image source={require("../assets/friends_profile2.png")}
                  style = {styles.profilePic}>
           </Image>
           <Text style={{textAlign: 'center'}}>  Emily </Text>
-          <Text style={{textAlign: 'center'}}>                                     </Text>
+          <Text style={{textAlign: 'center'}}>                                       </Text>
           <Text style={{textAlign: 'center'}}> Jan 8th</Text>
         </Text>
         
         <View style={styles.line}></View>
 
         <Text style={{fontSize:20, marginHorizontal: 30, marginVertical: 30}}>Completed horseback riding!</Text>
+
+        <TouchableOpacity 
+          style={styles.buttonFacebookStyle}
+          activeOpacity={0.5}
+          onPress={() => {setCount(count + 1)}}>
+          <Image
+            source={require("../assets/heart.png")}
+            style={styles.likeButton}
+          />
+          <Text style={styles.numLikes}>{count}</Text>
+        </TouchableOpacity>
 
         <Text style={styles.textContainer}>
           <Image source={require("../assets/user_profile_pic.png")}
@@ -116,6 +162,16 @@ const FeedScreen = () => {
         <Image source={require("../assets/paris.png")}
                style={styles.postPic}>
                </Image>
+        <TouchableOpacity 
+          style={styles.buttonFacebookStyle}
+          activeOpacity={0.5}
+          onPress={() => {setCount(count + 1)}}>
+          <Image
+            source={require("../assets/heart.png")}
+            style={styles.likeImage}
+          />
+          <Text style={styles.numImg}>{count}</Text>
+        </TouchableOpacity>
 
 
         
@@ -197,16 +253,30 @@ const styles = StyleSheet.create({
   },
 
   likeButton: { 
-    marginHorizontal: 350,
+    marginHorizontal: 20,
     marginVertical: -25,
     width: 40,
     height: 40,
   },
 
   numLikes: {
-    marginHorizontal: 80,
+    marginHorizontal: 60,
+    marginVertical: -7,
     fontSize: 15,
-  }
+  },
+
+  likeImage: { 
+    marginHorizontal: 20,
+    marginVertical: 10,
+    width: 40,
+    height: 40,
+  },
+
+  numImg: {
+    marginHorizontal: 60,
+    marginVertical: -15,
+    fontSize: 15,
+  },
 
 
 });
